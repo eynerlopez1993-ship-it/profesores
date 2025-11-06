@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intranet Profesores</title>
+  
+  <!-- TailwindCSS CDN para estilos rápidos y responsivos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Favicon del sitio -->
+  <link rel="icon" type="image/png" href="https://padrescolegio.dsm.edu.ni/logos/escudo.jpg">
+
+  <!-- CSS externo personalizado -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+
+<!-- HEADER -->
+<div id='contenido'> 
+<header class="bg-white shadow-md sticky top-0 z-50"> <!-- Barra superior fija -->
+  <div class="container mx-auto p-4 flex items-center justify-between">
+
+    <!-- Logo + Título del sitio -->
+    <div class="flex items-center space-x-4">
+      <a href="https://www.dsm.edu.ni" target="_blank" rel="noopener noreferrer">
+        <img src="https://padrescolegio.dsm.edu.ni/logos/logodsm.png" alt="Logo DSM" class="h-14">
+      </a>
+      <h1 class="text-xl font-bold hover:text-blue-600">
+        Intranet Profesores
+      </h1>
+    </div>
+
+    <!-- Botón hamburguesa para menú móvil -->
+    <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-lg">
+      <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Menú de navegación para escritorio -->
+    <nav class="hidden md:flex space-x-6 font-medium text-lg">
+      <a href="#inicio" class="hover:text-blue-600">Inicio</a>
+      <a href="#formularios" class="hover:text-blue-600">Formularios</a>
+      <a href="#enlaces" class="hover:text-blue-600">Enlaces</a>
+      <a href="#gestion" class="hover:text-blue-600">Gestión Documental</a>
+      <a href="#reportes" class="hover:text-blue-600">Reportes</a>	 	  
+    </nav>
+  </div>
+
+  <!-- Menú móvil desplegable -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md w-full z-40 overflow-y-auto opacity-0 transition-opacity duration-300">
+    <ul class="flex flex-col space-y-1 p-4 mt-20">
+      <!-- Links móviles -->
+      <li><a href="#inicio" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Inicio</a></li>
+      <li><a href="#formularios" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Formularios</a></li>
+      <li><a href="#enlaces" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Enlaces</a></li>
+	  <li><a href="#gestion" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Gestión Documental</a></li>
+	  <li><a href="#reportes" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Reportes</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- SECCIÓN PRINCIPAL -->
+<section id="inicio" class="text-center py-16 bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-500 text-white slide-right">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 drop-shadow-lg">
+      Bienvenidos, docentes del Colegio
+    </h2>
+    <p class="max-w-2xl mx-auto text-lg text-emerald-50 leading-relaxed">
+      Hemos creado este espacio para que puedan acceder de manera rápida y sencilla a los recursos, enlaces e información más relevante de nuestra institución. 
+      <br class="hidden sm:block">
+      Nuestro compromiso es acompañarles y mantener una comunicación cercana que fortalezca su valiosa labor educativa.
+    </p>
+  </div>
+</section>
+
+
+<!-- SECCIÓN FORMULARIOS PARA DOCENTES -->
+<section id="formularios" class="container mx-auto py-16 slide-left">
+  <h2 class="text-2xl font-bold text-center mb-8">Formularios para Docentes</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+
+    <!-- Solicitud de Excursión -->
+    <a href="https://forms.gle/wNGTobwvozS7g4hg9" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">🚌</span>
+      Solicitud de Excursión
+    </a>
+
+    <!-- Reporte de problemas y solicitudes al área de mantenimiento -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdA5WiBI_HdL9MB5iOvbLIoWjf9alwGTnoGWYi-AT4PHz4SaQ/viewform" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">🔧</span>
+      Reporte de problemas y solicitudes al área de mantenimiento
+    </a>
+
+    <!-- Solicitudes de trabajo para el área de comunicaciones -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSegb7dyPi-oJELTaLKmNVCFYaybKECX7lgWLA4wWvarqbB2fg/viewform" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">📢</span>
+      Solicitudes de trabajo para el área de comunicaciones
+    </a>
+
+    <!-- Solicitud de vacaciones - No remuneradas -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSflTtQRL9QwQQqmfEt6FO8Jiip0_KUahn7NTLmL7r2HafKJjw/viewform" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">🌴</span>
+      Solicitud de vacaciones - No remuneradas
+    </a>
+
+    <!-- Remitir alumnos a psicología -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfw_WEv3oCeNqx3GbMVrjn9Pr2-KJ7H0cBVU5G5_zn-GjWGJw/viewform" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">🧠</span>
+      Remitir alumnos a psicología
+    </a>
+
+    <!-- Solicitud de recorrido -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXpta0GXu4WpB-sryNhv8MG8hHwWoilTyRfGQAi4SK82ka9A/viewform" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">🚶‍♂️</span>
+      Solicitud de recorrido
+    </a>
+
+    <!-- Uso de dispositivos móviles -->
+    <a href="https://forms.gle/aSw9viB8PWJ9Wtvb6" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">📱</span>
+      Uso de dispositivos móviles
+    </a>
+
+    <!-- Referidos -->
+    <a href="https://referidos.dsm.edu.ni/" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">🤝</span>
+      Referidos
+    </a>
+
+    <!-- Solicitud de Impresiones -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0KMXzRFPidsD4DuYFE1w_sbius17Z_5YN2nIZThPDikwv4w/viewform" 
+    target="_blank" 
+    class="link-card bg-calendar hover-zoom">
+    <span class="icon-float link-icon">📝</span> <!-- Icono de formulario -->
+    Asignación de copias e impresiones
+    </a>
+
+    <!-- Firma Correo -->
+    <a href="https://script.google.com/a/macros/dsm.edu.ni/s/AKfycbxqx-ouFaXS1GsElDcDRo6PD6Kx68OZB7ls85P--W8xT30mRMdMs6gH8RKzuEfZTx56bg/exec" 
+    target="_blank" 
+    class="link-card bg-calendar hover-zoom">
+    <span class="icon-float link-icon">📧</span> <!-- Icono de correo -->
+    Generador de firma digital
+    </a>
+</div>
+  
+  <!-- Sub-sección: Formularios para Padres -->
+  <h3 class="text-xl font-semibold text-left mt-12 mb-4">Formularios para Padres</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+
+    <!-- Casos de enfermedad / cita médica -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3k3R5-HvngH1AUw54vf5dKhVdFi8InDj-0D-0Okc3e9D7FA/viewform" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">🩺</span>
+      Casos de enfermedad / cita médica
+    </a>
+
+  </div>
+</section>
+
+<!-- SECCIÓN ENLACES -->
+<section id="enlaces" class="container mx-auto py-16 slide-left">
+  <h2 class="text-2xl font-bold text-center mb-8">Enlaces</h2>
+
+  <!-- Portales y Calificaciones -->
+  <h3 class="text-xl font-semibold mb-4">Portales y Calificaciones</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-8">
+
+    <!-- Portal de notas -->
+    <a href="https://portales.dsm.edu.ni/profesores.aspx" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">📊</span>
+      Portal de notas
+    </a>
+
+    <!-- Aula Virtual -->
+    <a href="https://classroom.google.com/" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">💻</span>
+      Aula Virtual
+    </a>
+
+    <!-- Clave para computadoras de aulas -->
+    <a href="https://docs.google.com/document/d/13BlJdVUKQyfXZBJPI0Pq8njyB_e4wKPOANeEusU9Tw8/edit?usp=sharing" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">🔑</span>
+      Clave para computadoras de aulas
+    </a>
+  </div>
+
+  <!-- Horarios -->
+  <h3 class="text-xl font-semibold mb-4">Horarios</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-8">
+
+    <!-- Horarios de docentes -->
+    <a href="https://docs.google.com/spreadsheets/d/1I87P4BxhfxUseLxp7H2cWatirdS8vNiZ/edit?gid=116674992#gid=116674992" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">🗓️</span>
+      Horarios de docentes
+    </a>
+
+    <!-- Calendarios de exámenes y pruebas -->
+    <a href="https://sites.google.com/coalnic.edu.ni/calendariosgrupos/p%C3%A1gina-principal" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">📅</span>
+      Calendarios de exámenes y pruebas
+    </a>
+  </div>
+
+  <!-- Documentación -->
+  <h3 class="text-xl font-semibold mb-4">Documentación</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+
+    <!-- Información de Núcleos -->
+    <a href="https://docs.google.com/spreadsheets/d/1YhJSCZqBU6AgDccB_3wxG9Gu0QdwmLvwuElIMMf_wE8/edit?gid=1873507932#gid=1873507932" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">📂</span>
+      Información de Núcleos
+    </a>
+
+    <!-- Recorrido DSM - Distribución de rutas -->
+    <a href="https://docs.google.com/spreadsheets/d/1GdVGZHcEIELZz8EvVMAdpfkDTJTaJW-Nhxga9bVbHlo/edit?usp=sharing" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">🗺️</span>
+      Recorrido DSM - Distribución de rutas
+    </a>
+
+    <!-- Fechas de cierre y apertura de Portal de Notas y Portal Padres -->
+    <a href="https://docs.google.com/spreadsheets/d/11K68v4Yuek-AawqJP0ES4NI4ncEsd0KZGIqxLEqYdaA/edit?usp=sharing" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">⏰</span>
+      Fechas de cierre y apertura de Portal de Notas y Portal Padres
+    </a>
+
+  </div>
+</section>
+
+
+<!-- SECCIÓN GESTIÓN DOCUMENTAL -->
+<section id="gestion" class="container mx-auto py-16 slide-left">
+  <h2 class="text-2xl font-bold text-center mb-8">Gestión Documental</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+
+    <!-- Reuniones generales / Gesamtkonferenzen -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=1rIjrSMpPjpy65wuggOX97En7e_dlVYZl" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">📌</span>
+      Reuniones generales / Gesamtkonferenzen
+    </a>
+
+    <!-- Documentación Docentes (Guía) 2025 -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=19M0KxmlJaSSn8oMJmcgK4TpwMYQJO7fs" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">📘</span>
+      Documentación Docentes (Guía) 2025
+    </a>
+
+    <!-- Listas / Planes -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=11J1XlMwWNjavdsEZjL-Jxvh98lUg-gIs" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">📝</span>
+      Listas / Planes
+    </a>
+
+    <!-- Formatos / Plantillas -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=1NX0H4P-F94O5CMmHi4hbV7HKUNbVDVRV" target="_blank" class="link-card bg-citas hover-zoom">
+      <span class="icon-float link-icon">📄</span>
+      Formatos / Plantillas
+    </a>
+
+    <!-- Enseñanza -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=1grlX1amt7qMF2wMk_997bDtbjv2My84K" target="_blank" class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">🎓</span>
+      Enseñanza
+    </a>
+
+    <!-- Campañas -->
+    <a href="https://docs.google.com/folderview?authuser=0&id=1roiJwYJymRWrKdsExmh03N7mxr0sFIyr" target="_blank" class="link-card bg-drive hover-zoom">
+      <span class="icon-float link-icon">📢</span>
+      Campañas
+    </a>
+
+  </div>
+</section>
+
+<!-- SECCIÓN REPORTES -->
+<section id="reportes" class="container mx-auto py-16 slide-left">
+  <h2 class="text-2xl font-bold text-center mb-8">Reportes</h2>
+
+  <!-- Sub-sección: Notas -->
+  <h3 class="text-xl font-semibold text-left mb-4">Notas</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-8">
+    <!-- Boletines -->
+    <a href="https://sites.google.com/coalnic.edu.ni/profesores-coalnic/reportes/boletines" 
+       target="_blank" 
+       class="link-card bg-citas hover-zoom"
+       title="Para generar el reporte, deberá ingresar su usuario de dominio (nombre.apellido) y la contraseña asociada a su cuenta.">
+      <span class="icon-float link-icon">📝</span>
+      Boletines
+    </a>
+
+    <!-- Promedio Conducta por Corte -->
+    <a href="http://reportesclass.coalnic.edu.ni/ReportServer/Pages/ReportViewer.aspx?/COALNIC/01/REPORTES/ACADEMICO/RPT_REPORTE_INFORME_EVALUACION_CONDUCTA" 
+       target="_blank" 
+       class="link-card bg-calendar hover-zoom"
+       title="Para generar el reporte, deberá ingresar su usuario de dominio (nombre.apellido) y la contraseña asociada a su cuenta.">
+      <span class="icon-float link-icon">📊</span>
+      Promedio Conducta por Corte
+    </a>
+  </div>
+
+  <!-- Sub-sección: Datos Alumnos y Tutores -->
+  <h3 class="text-xl font-semibold text-left mb-4">Datos Alumnos y Tutores</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+    <!-- Alumnos por Grupo (Foto) -->
+    <a href="http://reportesclass.coalnic.edu.ni/ReportServer/Pages/ReportViewer.aspx?/COALNIC/01/Academico/RPT_FOTOS_ALUMNOSXGRUPO&rc%3aParameters=true" 
+       target="_blank" 
+       class="link-card bg-drive hover-zoom"
+       title="Para generar el reporte, deberá ingresar su usuario de dominio (nombre.apellido) y la contraseña asociada a su cuenta.">
+      <span class="icon-float link-icon">👨‍🎓</span>
+      Alumnos por Grupo (Foto)
+    </a>
+
+    <!-- Alumnos por Grupo (Sin Foto) -->
+    <a href="http://reportesclass.coalnic.edu.ni/ReportServer/Pages/ReportViewer.aspx?%2fCOALNIC%2f01%2fACADEMICO%2fRPT_ALUMNOSXGRUPO_SINFOTO&rs:Command=Render" 
+       target="_blank" 
+       class="link-card bg-citas hover-zoom"
+       title="Para generar el reporte, deberá ingresar su usuario de dominio (nombre.apellido) y la contraseña asociada a su cuenta.">
+      <span class="icon-float link-icon">👩‍🎓</span>
+      Alumnos por Grupo (Sin Foto)
+    </a>
+
+    <!-- Grupos de correo Padres de Familia (sin tooltip) -->
+    <a href="https://docs.google.com/spreadsheets/d/1l4CzFHEIxnD_WD0SwoVB5BM_E0LjOP7mxWizndwgaWc/edit?usp=sharing" 
+       target="_blank" 
+       class="link-card bg-calendar hover-zoom">
+      <span class="icon-float link-icon">📧</span>
+      Grupos de correo Padres de Familia
+    </a>
+  </div>
+</section>
+
+
+<!-- Visible -->
+<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+
+<!-- SECCIÓN GRUPO DOCENTES -->
+<section id="grupo-docentes" class="container mx-auto py-16 slide-left">
+  <h2 class="text-2xl font-bold text-center mb-8">Grupo Docentes</h2>
+
+  <div class="max-w-[1100px] mx-auto rounded-lg overflow-hidden border border-gray-200">
+    <div class="bg-gray-50 px-4 py-2 flex justify-between items-center border-b border-gray-200">
+      <strong>Grupo Docentes</strong>
+      <a href="https://groups.google.com/a/dsm.edu.ni/g/docentes" 
+         target="_blank" 
+         class="text-blue-600 text-sm hover:underline">
+        Abrir en Google Groups
+      </a>
+    </div>
+    <div class="p-6 text-center">
+      <span style="font-size:3rem;">👩‍🏫</span>
+      <p class="mt-4 text-lg font-semibold">Grupo Docentes DSM</p>
+      <p class="mt-2 text-gray-600">
+        Aquí puedes acceder al grupo de correo de docentes para ver anuncios, discusiones y archivos compartidos.
+      </p>
+      <a href="https://groups.google.com/a/dsm.edu.ni/g/docentes" 
+         target="_blank" 
+         class="mt-4 inline-block px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        Ir al grupo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Sección para visualizar el sitio interno de forma responsiva -->
+<section id="visualizacion-interna" style="margin: 20px 0; display: flex; justify-content: center; align-items: center; height: 90vh;">
+  <div style="width: 95%; height: 100%; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+    <iframe 
+      src="http://192.168.2.52:8080/" 
+      style="width: 100%; height: 100%; border: none;" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+<!-- Visible -->
+<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+
+
+<!-- FORMULARIO DE AYUDA -->
+<section id="soporte" class="container mx-auto py-16">
+  <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6 relative">
+
+    <h2 class="text-2xl font-bold text-center mb-8">Formulario de Solicitud</h2>
+
+    <form id="formAyuda">
+      <!-- Nombre -->
+      <label for="nombre">Nombre del solicitante:</label>
+      <input type="text" id="nombre" name="nombre" required 
+             class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
+			 
+      <!-- Correo -->
+      <label for="correo" class="block font-semibold mb-1">Correo electrónico del solicitante:</label>
+      <input 
+        type="email" 
+        id="correo" 
+        name="correo" 
+        required 
+        placeholder="juan.perez@padre.dsm.edu.ni"
+        class="w-full border rounded p-2 mb-2 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
+
+      <p id="errorCorreo" class="hidden text-red-600 text-sm flex items-center gap-1">
+        <span>⚠️ Debe ingresar su correo institucional <strong>@dsm.edu.ni</strong></span>
+      </p>
+
+      <!-- Selector destinatario -->
+      <label for="destinatario">Selecciona a quién deseas contactar:</label>
+      <select id="destinatario" name="destinatario" required 
+              class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
+        <option value="" disabled selected>-- Selecciona un contacto --</option>
+        <option value="administracion@dsm.edu.ni">Director Administrativo</option>
+        <option value="direccion.general@dsm.edu.ni">Director General</option>
+        <option value="direccion.primaria@dsm.edu.ni">Directora Primaria</option>
+        <option value="direccion.kindergarten@dsm.edu.ni">Directora Kindergarten</option>
+        <option value="subdireccion.nacional@dsm.edu.ni">Subdirección Nacional</option>
+        <option value="secretaria.academica@dsm.edu.ni">Secretaría Académica</option>
+        <option value="dsc@dsm.edu.ni">Club Deportivo</option>
+		<option value="carola.hilffert@dsm.edu.ni">Representante de JD</option>
+		<option value="kiosko@dsm.edu.ni">Kiosko</option>
+        <option value="admisiones@dsm.edu.ni">Admisiones</option>
+        <option value="informatica@dsm.edu.ni">Informática</option>
+        <option value="difusiondsm@dsm.edu.ni">Marketing</option>
+      </select>
+
+      <!-- Mensaje -->
+      <label for="mensaje">Descripción</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required 
+                class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none"></textarea>
+
+      <!-- Botón -->
+      <button type="submit" 
+              class="bg-blue-600 hover:bg-blue-700 focus:bg-green-500 active:bg-green-600 text-white font-semibold py-2 px-4 rounded w-full transition-colors duration-200">
+        Enviar solicitud
+      </button>
+    </form>
+
+    <!-- 🔄 Modal -->
+    <div id="loadingModal" 
+         class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden z-50 rounded-lg">
+      <div class="bg-white rounded-xl p-6 flex flex-col items-center shadow-xl">
+        <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p class="text-gray-700 font-semibold">Procesando tu solicitud...</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Visible -->
+<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+
+
+<!-- Noticias Varias -->
+<section id="avisos" class="text-center py-16 bg-gradient-to-r from-blue-50 to-blue-100 slide-right">
+  <h2 class="text-2xl font-bold mb-4">Noticias Varias</h2>
+
+  <div class="relative inline-block rounded-xl shadow-lg overflow-hidden"
+       style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
+
+    <img id="slideshow-img" src="https://via.placeholder.com/800x450" 
+         alt="Imagen" 
+         class="rounded-xl shadow-lg h-auto object-contain transition duration-500"
+         style="width: 40vw; max-width: 400px; display:block;">
+    
+    <!-- Botones de navegación -->
+    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">
+      &#10094;
+    </button>
+    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">
+      &#10095;
+    </button>
+  </div>
+</section>
+
+<!-- Visible -->
+<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+
+
+<!-- NUESTRAS REDES SOCIALES -->
+<section id="redes" class="container mx-auto py-16 slide-left">
+
+  <div class="text-center my-8 follow-us">
+    <h3>Nuestras Redes Sociales</h3>
+    <h3>Síguenos y mantente conectado</h3>
+    
+    <div class="mt-6 flex justify-center gap-8">
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/dsmanagua" target="_blank" class="gif-link hover-zoom">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjl1a3Z4aTNidnVlanBieXp2OW9udTNncTZhdHhtemlubmpmYzFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9FbLcp4NnluxdR6EyZ/giphy.gif" 
+             alt="Facebook Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/dsmanagua" target="_blank" class="gif-link hover-zoom">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExemRnYmdoNWNyNDB1aXRtODVland0MTN2Y3EyZW5uYXozdTJzejExaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uo6rcjwHSAFsQ/giphy.gif" 
+             alt="Instagram Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://youtube.com/@colegioalemannicaraguense9449?feature=shared" target="_blank" class="gif-link hover-zoom">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWE4ejRtcWdxZm56NnkweGdjMWFmN2lrZmoya3J2eWpqOHd1cXd4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13Nc3xlO1kGg3S/giphy.gif" 
+             alt="YouTube Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Chat flotante estilo interactivo -->
+<div class="chat-container">
+  <div class="chat-bubble" id="chatBubble">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <span>Chatea con nosotros</span>
+      <button id="closeChat" title="Cerrar chat">X</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="message bot">¡Hola! 👋</div>
+      <div class="message bot">Escribe tu mensaje y te responderemos por WhatsApp.</div>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="userMessage" placeholder="Escribe un mensaje..." />
+      <button id="sendMessage">Enviar</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer id="contacto" class="bg-blue-900 text-white py-8 slide-left">
+  <div class="container mx-auto text-center space-y-4">
+    <p class="font-semibold">Deutsche Schule Managua - Colegio Alemán Nicaragüense</p>
+    <p>Dirección: Km 10.5 Carretera Sur, 800 al oeste, Managua, Nicaragua</p>
+    
+    <!-- Correo -->
+    <p>
+      Correo: 
+      <a href="mailto:info@dsm.edu.ni" class="underline hover:text-yellow-300">
+        info@dsm.edu.ni
+      </a>
+    </p>
+
+    <!-- Celular / WhatsApp -->
+    <p class="flex justify-center items-center space-x-2">
+      <span>Celular:</span>
+      <a href="https://wa.me/50588565989" target="_blank" class="underline hover:text-green-300">
+        8856-5989
+      </a>
+    </p>
+
+    <p>Horario de atención: 07:30am a 05:00pm</p>
+
+    <!-- Página web con emoji -->
+    <p>
+      🌐 
+      <a href="https://www.dsm.edu.ni" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-300">
+        www.dsm.edu.ni
+      </a>
+    </p>
+  </div>
+</footer>
+
+
+
+<!-- Al final del body -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/js.js"></script>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
