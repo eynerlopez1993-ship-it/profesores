@@ -1,0 +1,748 @@
+
+  /* Animaciones */
+  @keyframes fadeInUp { 0% {opacity:0; transform:translateY(20px);} 100% {opacity:1; transform:translateY(0);} }
+  @keyframes fadeInPage { 0% {opacity:0; transform:scale(0.95);} 100% {opacity:1; transform:scale(1);} }
+  @keyframes slideInLeft { 0% {opacity:0; transform:translateX(-50px);} 100% {opacity:1; transform:translateX(0);} }
+  @keyframes slideInRight { 0% {opacity:0; transform:translateX(50px);} 100% {opacity:1; transform:translateX(0);} }
+  @keyframes floatBounce { 0% { transform: translateY(0) scale(1);} 25% { transform: translateY(-6px) scale(1.05);} 50% { transform: translateY(0) scale(1);} 75% { transform: translateY(-3px) scale(1.02);} 100% { transform: translateY(0) scale(1);} }
+
+  body { opacity:0; animation: fadeInPage 1s forwards; transform-origin: center; }
+  .fade-in-up, .slide-left, .slide-right { opacity:0; }
+
+  /* Botones hover zoom */
+  .hover-zoom:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+  .hover-zoom { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+  /* Iconos flotantes */
+  .icon-float { display:inline-block; font-size:3rem; animation: floatBounce 3s ease-in-out infinite; transition: transform 0.3s ease, text-shadow 0.3s ease; }
+  .icon-float:hover { transform: translateY(-5px) rotate(-10deg) scale(1.3); text-shadow: 0 0 15px rgba(255,255,255,0.8); }
+
+  /* Tarjetas enlaces */
+  .link-card { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1.5rem; border-radius:1rem; color:white; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition: all 0.3s ease; text-decoration:none; position:relative; }
+  .link-card:hover { transform: scale(1.1); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+  .link-icon { display:flex; align-items:center; justify-content:center; padding:1rem; border-radius:50%; margin-bottom:0.5rem; background-color: rgba(255,255,255,0.2); transition: all 0.3s ease; }
+  .link-card:hover .link-icon { background-color:white; transform: scale(1.3); color:#000; }
+  
+/* ======= Gradientes ======= */
+.bg-portal { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-classroom { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-calendar { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-drive { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-comunicados { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-whatsapp { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-facebook { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-instagram { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-youtube { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-kindergarten { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-colegio { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-citas { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-directorio { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-consultas { background: linear-gradient(90deg, #92400e, #f59e0b); }
+.bg-horarios { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-contactos { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-materiales { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-calificaciones { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-documentos { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+
+.bg-horarios { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-contactos { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-materiales { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-calificaciones { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+.bg-documentos { background: linear-gradient(90deg, #1e3a8a, #3b82f6); }
+
+
+/* Asegúrate que ambos lados tengan el mismo color */
+.flip-card-front, .flip-card-back {
+  border-radius: 0.5rem;
+  color: white;
+}
+
+
+/* ======= Hover y Active ======= */
+.bg-portal,
+.bg-classroom,
+.bg-calendar,
+.bg-drive,
+.bg-comunicados,
+.bg-whatsapp,
+.bg-facebook,
+.bg-instagram,
+.bg-youtube,
+.bg-kindergarten,
+.bg-colegio,
+.bg-citas,
+.bg-directorio,
+.bg-consultas,
+.bg-horarios,
+.bg-contactos,
+.bg-materiales,
+.bg-calificaciones,
+.bg-documentos {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.bg-portal:hover,
+.bg-classroom:hover,
+.bg-calendar:hover,
+.bg-drive:hover,
+.bg-comunicados:hover,
+.bg-whatsapp:hover,
+.bg-facebook:hover,
+.bg-instagram:hover,
+.bg-youtube:hover,
+.bg-kindergarten:hover,
+.bg-colegio:hover,
+.bg-citas:hover,
+.bg-directorio:hover,
+.bg-consultas:hover,
+.bg-horarios:hover,
+.bg-contactos:hover,
+.bg-materiales:hover,
+.bg-calificaciones:hover,
+.bg-documentos:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= Efecto al hacer clic ======= */
+.bg-portal:active,
+.bg-classroom:active,
+.bg-calendar:active,
+.bg-drive:active,
+.bg-comunicados:active,
+.bg-whatsapp:active,
+.bg-facebook:active,
+.bg-instagram:active,
+.bg-youtube:active,
+.bg-kindergarten:active,
+.bg-colegio:active,
+.bg-citas:active,
+.bg-directorio:active,
+.bg-consultas:active,
+.bg-horarios:active,
+.bg-contactos:active,
+.bg-materiales:active,
+.bg-calificaciones:active,
+.bg-documentos:active {
+  transform: scale(0.97);
+  filter: brightness(1.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+}
+/* ======= Animación rebote y giro de iconos ======= */
+.icon-rotate-hover {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-rotate-hover:hover {
+  animation: bounceRotate 0.6s ease forwards;
+}
+
+@keyframes bounceRotate {
+  0%   { transform: rotate(0deg) translateY(0); }
+  25%  { transform: rotate(10deg) translateY(-5px); }
+  50%  { transform: rotate(-10deg) translateY(-10px); }
+  75%  { transform: rotate(5deg) translateY(-5px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
+/* ======= Animación de aparición secuencial ======= */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Aplicar animación a cada grupo */
+.group-appear {
+  opacity: 0;
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Retrasos secuenciales para cada grupo */
+.group-appear:nth-child(1) { animation-delay: 0.2s; }
+.group-appear:nth-child(2) { animation-delay: 0.4s; }
+.group-appear:nth-child(3) { animation-delay: 0.6s; }
+.group-appear:nth-child(4) { animation-delay: 0.8s; }
+.group-appear:nth-child(5) { animation-delay: 1s; }
+
+
+  /* Mapas */
+  .map-container { border-radius:1rem; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom:1.5rem; }
+  .map-container:hover { transform: scale(1.05); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+  
+  /* Flip Card para Certificado de Notas */
+.perspective { perspective: 1000px; }
+.flip-card { width: 100%; height: 200px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.flip-card-front { color: white; }
+.flip-card-back { background: linear-gradient(90deg, #6b21a8, #a855f7); transform: rotateY(180deg); color: white; padding: 1rem; }
+
+/* Flip Card optimizado */
+.perspective { perspective: 1000px; }
+.flip-card { width: 100%; height: 220px; cursor: pointer; border-radius: 1rem; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); transform-style: preserve-3d; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.flip-card-back a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+#slideshow-img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#slideshow-img.show {
+  opacity: 1;
+}
+
+#slideshow-img {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 1rem;
+}
+
+/* Galeria de Imagen */
+
+#slideshow-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#slideshow .relative:hover #slideshow-img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.icon-rotate-hover {
+  transition: transform 0.5s ease;
+}
+
+.icon-rotate-hover:hover {
+  transform: rotate(360deg);
+}
+
+.icon-rotate-hover {
+  transition: transform 0.5s ease;
+}
+
+.icon-rotate-hover:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Efecto flotante base */
+.icon-float {
+  display: inline-block;
+  font-size: 3rem;
+  animation: floatBounce 3s ease-in-out infinite;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover: solo gira mientras está el mouse */
+.icon-float:hover img {
+  animation: spin 1s linear infinite;
+}
+
+/* Animación flotante */
+@keyframes floatBounce {
+  0% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-6px) scale(1.05); }
+  50% { transform: translateY(0) scale(1); }
+  75% { transform: translateY(-3px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Animación de giro */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.icon-rotate-hover {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.icon-rotate-hover:hover {
+  transform: rotate(360deg);
+}
+/* Excluir GIF del bus: nunca gira */
+.no-rotate:hover {
+  transform: none !important;
+}
+
+/* Miniaturas con zoom al pasar el mouse */
+  .thumbnail {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s, z-index 0.3s;
+    cursor: pointer;
+  }
+
+  .thumbnail:hover {
+    transform: scale(2); /* Ajusta el zoom */
+    z-index: 10;
+  }
+
+  .remove-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .thumbnail-container {
+    position: relative;
+  }
+  
+  /* CSS para Whassap */
+
+/* =========================================
+   Chat flotante WhatsApp optimizado
+   ========================================= */
+
+/* Contenedor del chat */
+.chat-container {
+  position: fixed;       /* Fija en la pantalla */
+  bottom: 20px;          /* Separación inferior */
+  right: 20px;           /* Separación derecha */
+  z-index: 9999;         /* Siempre encima */
+}
+
+/* Burbuja de WhatsApp */
+#chatBubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: pulse 2s infinite; /* animación de pulso */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#chatBubble:hover {
+  transform: scale(1.1);
+}
+
+#chatBubble img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Ventana de chat */
+.chat-window {
+  display: none;
+  width: 280px;
+  max-height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  flex-direction: column;
+  position: fixed;      /* fundamental para flotar */
+  bottom: 90px;         /* separación respecto a la burbuja */
+  right: 20px;
+  overflow: hidden;
+  animation: slideIn 0.3s forwards;
+  z-index: 10000;       /* siempre encima de todo */
+}
+
+/* Cabecera del chat */
+.chat-header {
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Cuerpo del chat */
+.chat-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #f0f0f0;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.message.bot { background-color: #e0ffe0; align-self: flex-start; }
+.message.user { background-color: #dcf8c6; align-self: flex-end; }
+
+/* Pie de chat (input + botón) */
+.chat-footer {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.chat-footer button {
+  background-color: #25D366;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.chat-footer button:hover {
+  background-color: #1ebe57;
+}
+
+/* =========================================
+   Animaciones
+   ========================================= */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.follow-us h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f59e0b, #f43f5e, #3b82f6, #10b981);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite, pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.gif-float {
+  width: 140px;       /* tamaño ideal para destacar sin pixelar */
+  height: 140px;
+  object-fit: contain;
+  animation: float 2s ease-in-out infinite;
+}
+
+
+/* ======= Flip Card Base ======= */
+.flip-card {
+  background: transparent;
+  perspective: 1000px; /* profundidad 3D */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* ⚠️ evita color lila */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 1rem;
+}
+
+
+/* ======= Iconos flotantes opcionales ======= */
+.icon-float {
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ======= Zoom en hover ======= */
+.hover-zoom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+/* CSS Flip Cards */
+
+.flip-card {
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 12rem; /* altura fija, ajustar según necesidad */
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 0.5rem;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 200px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+	 /* Animación fade al seleccionar */
+    .menu-link {
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+    .menu-link:active {
+      color: #2563eb; /* azul Tailwind */
+      background-color: #e0f2fe;
+    }
+
+	#menu-btn {
+  display: block; /* o flex, según diseño */
+  position: fixed; /* opcional, si quieres que quede siempre visible al hacer scroll */
+  top: 1rem; /* ubicación vertical */
+  right: 1rem; /* ubicación horizontal */
+  z-index: 50; /* para que quede encima de otros elementos */
+}
+
+
+	header h1 {
+  margin-right: 3rem; /* ajusta según el tamaño del botón */
+}
+	
+	
+<!-- Estilos -->
+
+.flip-card {
+  cursor: pointer;
+  outline: none;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px 5px rgba(59,130,246,0.6);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Borde LED azul tipo neón */
+.led-border {
+  position: relative;
+  border: 4px solid #00f; /* línea base azul */
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #00f, 0 0 20px #0ff, 0 0 30px #00f, 0 0 40px #0ff;
+  overflow: hidden;
+}
+
+.led-border::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  border: 4px solid transparent;
+  box-shadow: 0 0 15px #00f, 0 0 30px #0ff;
+  animation: neonBorder 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes neonBorder {
+  0% { box-shadow: 0 0 10px #00f, 0 0 20px #0ff; }
+  50% { box-shadow: 0 0 20px #00f, 0 0 40px #0ff; }
+  100% { box-shadow: 0 0 10px #00f, 0 0 20px #0ff; }
+}
+
+/* Parpadeo "haga click aquí" tipo oferta */
+.blink {
+  color: red;
+  animation: blinkText 1s step-start infinite;
+}
+
+@keyframes blinkText {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+
+/* 🚫 Bloquea scroll global cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;
+}
+
