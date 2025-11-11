@@ -348,24 +348,40 @@ sendBtn?.addEventListener('click', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
   const iframeWrapper = document.getElementById('iframe-wrapper');
   const alertMessage = document.getElementById('alert-message');
   const url = 'http://190.212.46.18:8080/';
 
-  // Intentamos hacer fetch al recurso
-  fetch(url, {mode: 'no-cors'}) // no-cors permite que no se rompa el JS aunque sea interna
-    .then(() => {
-      // Si la request pasa, insertamos el iframe
-      const iframe = document.createElement('iframe');
-      iframe.src = url;
-      iframe.className = 'w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[80vh] border-0';
-      iframe.allowFullscreen = true;
-      iframeWrapper.appendChild(iframe);
-    })
-    .catch(() => {
-      // Si falla, mostramos el mensaje
+  // Crear iframe
+  const iframe = document.createElement('iframe');
+  iframe.src = url;
+  iframe.className = 'w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[80vh] border-0';
+  iframe.allowFullscreen = true;
+
+  // Intentar detectar carga del iframe
+  iframe.onload = () => {
+    try {
+      // Intentamos acceder al contenido (puede fallar si bloquea X-Frame-Options)
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      // Si no se lanza error, iframe cargó correctamente
+      alertMessage.style.display = 'none';
+    } catch (e) {
+      // Si falla, ocultamos el iframe y mostramos mensaje
+      iframeWrapper.removeChild(iframe);
       alertMessage.style.display = 'block';
-    });
+    }
+  };
+
+  // Manejo de error de red (si no se puede conectar)
+  iframe.onerror = () => {
+    alertMessage.style.display = 'block';
+  };
+
+  // Agregamos el iframe al contenedor
+  iframeWrapper.appendChild(iframe);
+});
+
 
 
 /* ===========================
@@ -373,3 +389,4 @@ sendBtn?.addEventListener('click', () => {
    - Evitar scroll al recargar
 =========================== */
 window.addEventListener('beforeunload', () => window.scrollTo(0,0));
+
