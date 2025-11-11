@@ -14,7 +14,7 @@
   <!-- CSS externo personalizado -->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="antialiased bg-gray-50 overflow-x-hidden">
 
 
 <!-- HEADER -->
@@ -39,15 +39,41 @@
       </svg>
     </button>
 
-    <!-- Menú de navegación para escritorio -->
-    <nav class="hidden md:flex space-x-6 font-medium text-lg">
-      <a href="#inicio" class="hover:text-blue-600">Inicio</a>
-      <a href="#formularios" class="hover:text-blue-600">Formularios</a>
-      <a href="#enlaces" class="hover:text-blue-600">Enlaces</a>
-      <a href="#gestion" class="hover:text-blue-600">Gestión Documental</a>
-      <a href="#reportes" class="hover:text-blue-600">Reportes</a>	 	  
-    </nav>
-  </div>
+
+<!-- Menú escritorio estilo botones degradado emerald -->
+<nav class="hidden md:flex space-x-4 font-medium text-lg">
+  <a href="#inicio" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Inicio
+  </a>
+  <a href="#formularios" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Formularios
+  </a>
+  <a href="#enlaces" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Enlaces
+  </a>
+  <a href="#gestion" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Gestión Documental
+  </a>
+  <a href="#reportes" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Reportes
+  </a>
+  <a href="#sustituciones" class="px-4 py-2 text-white rounded-md shadow-md
+     hover:-translate-y-1 transition-all duration-300"
+     style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
+    Sustituciones
+  </a>
+</nav>
+
 
   <!-- Menú móvil desplegable -->
   <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md w-full z-40 overflow-y-auto opacity-0 transition-opacity duration-300">
@@ -58,23 +84,26 @@
       <li><a href="#enlaces" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Enlaces</a></li>
 	  <li><a href="#gestion" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Gestión Documental</a></li>
 	  <li><a href="#reportes" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Reportes</a></li>
+	  <li><a href="#sustituciones" class="menu-link block px-3 py-2 hover:bg-gray-100 rounded">Sustituciones</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- SECCIÓN PRINCIPAL -->
-<section id="inicio" class="text-center py-16 bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-500 text-white slide-right">
+<section id="inicio" class="text-center py-16 text-white slide-right"
+         style="background: linear-gradient(to right, #1e3a8a, #3b82f6);">
   <div class="container mx-auto px-6">
     <h2 class="text-3xl md:text-4xl font-extrabold mb-6 drop-shadow-lg">
       Bienvenidos, docentes del Colegio
     </h2>
-    <p class="max-w-2xl mx-auto text-lg text-emerald-50 leading-relaxed">
+    <p class="max-w-2xl mx-auto text-lg text-white leading-relaxed">
       Hemos creado este espacio para que puedan acceder de manera rápida y sencilla a los recursos, enlaces e información más relevante de nuestra institución. 
       <br class="hidden sm:block">
       Nuestro compromiso es acompañarles y mantener una comunicación cercana que fortalezca su valiosa labor educativa.
     </p>
   </div>
 </section>
+
 
 
 <!-- SECCIÓN FORMULARIOS PARA DOCENTES -->
@@ -312,7 +341,6 @@
       <span class="icon-float link-icon">👨‍🎓</span>
       Alumnos por Grupo (Foto)
     </a>
-
     <!-- Alumnos por Grupo (Sin Foto) -->
     <a href="http://reportesclass.coalnic.edu.ni/ReportServer/Pages/ReportViewer.aspx?%2fCOALNIC%2f01%2fACADEMICO%2fRPT_ALUMNOSXGRUPO_SINFOTO&rs:Command=Render" 
        target="_blank" 
@@ -321,20 +349,124 @@
       <span class="icon-float link-icon">👩‍🎓</span>
       Alumnos por Grupo (Sin Foto)
     </a>
-
+</section>
     <!-- Grupos de correo Padres de Familia (sin tooltip) -->
-    <a href="https://docs.google.com/spreadsheets/d/1l4CzFHEIxnD_WD0SwoVB5BM_E0LjOP7mxWizndwgaWc/edit?usp=sharing" 
+  <!--  <a href="https://docs.google.com/spreadsheets/d/1l4CzFHEIxnD_WD0SwoVB5BM_E0LjOP7mxWizndwgaWc/edit?usp=sharing" 
        target="_blank" 
        class="link-card bg-calendar hover-zoom">
       <span class="icon-float link-icon">📧</span>
       Grupos de correo Padres de Familia
     </a>
+  </div>-->
+
+
+  <section class="py-8 px-4 sm:px-6">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">
+    <a href="https://docs.google.com/spreadsheets/d/1l4CzFHEIxnD_WD0SwoVB5BM_E0LjOP7mxWizndwgaWc/edit?usp=sharing"
+       target="_blank"
+       class="text-blue-600 hover:underline">
+      Correos de Padres por Grado y Grupo
+    </a>
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Primer bloque: Primero a Sexto -->
+    <div class="bg-white shadow rounded-lg p-4 sm:p-6">
+      <h3 class="text-lg md:text-xl font-semibold mb-4 text-center">Primero a Sexto</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Primero</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.primero.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.primero.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.primero.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.primero.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.primero.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.primero.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Segundo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.segundo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.segundo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.segundo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.segundo.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.segundo.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.segundo.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Tercero</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.tercero.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.tercero.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.tercero.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.tercero.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.tercero.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.tercero.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Cuarto</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.cuarto.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.cuarto.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.cuarto.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.cuarto.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.cuarto.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.cuarto.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Quinto</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.quinto.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.quinto.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.quinto.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.quinto.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.quinto.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.quinto.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-emerald-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Sexto</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.sexto.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.sexto.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.sexto.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.sexto.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.sexto.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.sexto.c@dsm.edu.ni</a></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Segundo bloque: Séptimo a Duodécimo -->
+    <div class="bg-white shadow rounded-lg p-4 sm:p-6">
+      <h3 class="text-lg md:text-xl font-semibold mb-4 text-center">Séptimo a Duodécimo</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Séptimo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.septimo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.septimo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.septimo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.septimo.b@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Octavo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.octavo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.octavo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.octavo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.octavo.b@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Noveno</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.noveno.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.noveno.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.noveno.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.noveno.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.noveno.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.noveno.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Décimo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.decimo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.decimo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.decimo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.decimo.b@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">C:</span> <a href="mailto:padres.decimo.c@dsm.edu.ni" class="text-blue-600 hover:underline">padres.decimo.c@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Undécimo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.undecimo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.undecimo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.undecimo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.undecimo.b@dsm.edu.ni</a></p>
+        </div>
+
+        <div class="bg-blue-50 p-3 rounded">
+          <h4 class="font-bold mb-2 text-center">Duodécimo</h4>
+          <p><span class="font-semibold">A:</span> <a href="mailto:padres.duodecimo.a@dsm.edu.ni" class="text-blue-600 hover:underline">padres.duodecimo.a@dsm.edu.ni</a></p>
+          <p><span class="font-semibold">B:</span> <a href="mailto:padres.duodecimo.b@dsm.edu.ni" class="text-blue-600 hover:underline">padres.duodecimo.b@dsm.edu.ni</a></p>
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
-
-
-<!-- Visible -->
-<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
 
 <!-- SECCIÓN GRUPO DOCENTES -->
 <section id="grupo-docentes" class="container mx-auto py-16 slide-left">
@@ -362,153 +494,132 @@
       </a>
     </div>
   </div>
+
+<!-- Calendario Escolar -->
+<section id="calendario" class="container mx-auto pt-16 pb-5">
+  <h2 class="text-2xl font-bold text-center mb-8">Calendario Escolar</h2>
+
+  <div class="max-w-[1100px] mx-auto rounded-lg overflow-hidden border border-gray-200">
+    <div class="bg-gray-50 px-4 py-2 flex justify-between items-center border-b border-gray-200">
+      <strong>Calendario (responsivo)</strong>
+      <a href="https://calendar.google.com/calendar/u/0/embed?color=%23b99aff&color=%23fa573c&color=%23ff7537&src=c_m6pfg3cto15qfgut56crj2g19k@group.calendar.google.com&src=coalnic.edu.ni_38sr2stjccsrinimjqhctdk9uo@group.calendar.google.com&src=coalnic.edu.ni_rgfir4s1psl2a52cjpibsr6s7g@group.calendar.google.com"
+         target="_blank"
+         class="text-blue-600 text-sm hover:underline">
+        Abrir en otra pestaña
+      </a>
+    </div>
+    <div class="relative w-full" style="padding-top:66.6667%;">
+      <iframe
+        src="https://calendar.google.com/calendar/u/0/embed?color=%23b99aff&color=%23fa573c&color=%23ff7537&src=c_m6pfg3cto15qfgut56crj2g19k@group.calendar.google.com&src=coalnic.edu.ni_38sr2stjccsrinimjqhctdk9uo@group.calendar.google.com&src=coalnic.edu.ni_rgfir4s1psl2a52cjpibsr6s7g@group.calendar.google.com&ctz=America/Managua"
+        class="absolute top-0 left-0 w-full h-full border-0"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
+  </div>
 </section>
 
-<!-- Sección para visualizar el sitio interno de forma responsiva -->
-<section id="visualizacion-interna" style="margin: 20px 0; display: flex; justify-content: center; align-items: center; height: 90vh;">
-  <div style="width: 95%; height: 100%; border: 1px solid #ccc; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
-    <iframe 
-      src="http://192.168.2.52:8080/" 
-      style="width: 100%; height: 100%; border: none;" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
+<!-- Plan de Sustituciones -->
+<section id="sustituciones" class="container mx-auto pt-5 pb-16">
+  <h2 class="text-3xl font-bold text-center mb-12 text-blue-600">
+    <a href="http://192.168.2.93:8080/" target="_blank" class="hover:underline">
+      Plan de Sustituciones
+    </a>
+  </h2>
+
+  <!-- Contenedor con marco luminoso -->
+  <div id="sustituciones-container" class="w-full max-w-[1600px] mx-auto p-1 rounded-3xl
+              bg-gradient-to-r from-blue-400 via-blue-200 to-blue-400
+              shadow-lg transition-all duration-500 hover:shadow-2xl">
+    
+    <!-- Contenedor interno para iframe o mensaje -->
+    <div id="iframe-wrapper" class="bg-white rounded-2xl overflow-hidden shadow-inner">
+      <!-- Aquí se insertará el iframe o el mensaje -->
+      <p class="text-center text-red-600 p-6" id="alert-message" style="display:none;">
+        ⚠️ El Plan de Sustituciones no está disponible en este momento.
+      </p>
+    </div>
   </div>
 </section>
 
 
-<!-- Visible -->
-<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
 
+<!-- SOPORTE -->
+  <section id="soporte" class="container mx-auto py-12 px-4">
+    <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6 relative">
+      <h2 class="text-2xl font-bold text-center mb-6">Formulario de Solicitud</h2>
+      <form id="formAyuda">
+        <label for="nombre">Nombre del solicitante:</label>
+        <input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
 
-<!-- FORMULARIO DE AYUDA -->
-<section id="soporte" class="container mx-auto py-16">
-  <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6 relative">
+        <label for="correo" class="block font-semibold mb-1">Correo electrónico del solicitante:</label>
+        <input type="email" id="correo" name="correo" required placeholder="juan.perez@dsm.edu.ni" class="w-full border rounded p-2 mb-2 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
 
-    <h2 class="text-2xl font-bold text-center mb-8">Formulario de Solicitud</h2>
+        <p id="errorCorreo" class="hidden text-red-600 text-sm flex items-center gap-1"><span>⚠️ Debe ingresar su correo institucional <strong>@dsm.edu.ni</strong></span></p>
 
-    <form id="formAyuda">
-      <!-- Nombre -->
-      <label for="nombre">Nombre del solicitante:</label>
-      <input type="text" id="nombre" name="nombre" required 
-             class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
-			 
-      <!-- Correo -->
-      <label for="correo" class="block font-semibold mb-1">Correo electrónico del solicitante:</label>
-      <input 
-        type="email" 
-        id="correo" 
-        name="correo" 
-        required 
-        placeholder="juan.perez@padre.dsm.edu.ni"
-        class="w-full border rounded p-2 mb-2 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
+        <label for="destinatario">Selecciona a quién deseas contactar:</label>
+        <select id="destinatario" name="destinatario" required class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
+          <option value="" disabled selected>-- Selecciona un contacto --</option>
+          <option value="administracion@dsm.edu.ni">Director Administrativo</option>
+          <option value="direccion.general@dsm.edu.ni">Director General</option>
+          <option value="direccion.primaria@dsm.edu.ni">Directora Primaria</option>
+          <option value="direccion.kindergarten@dsm.edu.ni">Directora Kindergarten</option>
+          <option value="subdireccion.nacional@dsm.edu.ni">Subdirección Nacional</option>
+          <option value="secretaria.academica@dsm.edu.ni">Secretaría Académica</option>
+          <option value="dsc@dsm.edu.ni">Club Deportivo</option>
+          <option value="carola.hilffert@dsm.edu.ni">Representante de JD</option>
+          <option value="kiosko@dsm.edu.ni">Kiosko</option>
+          <option value="admisiones@dsm.edu.ni">Admisiones</option>
+          <option value="informatica@dsm.edu.ni">Informática</option>
+          <option value="difusiondsm@dsm.edu.ni">Marketing</option>
+        </select>
 
-      <p id="errorCorreo" class="hidden text-red-600 text-sm flex items-center gap-1">
-        <span>⚠️ Debe ingresar su correo institucional <strong>@dsm.edu.ni</strong></span>
-      </p>
+        <label for="mensaje">Descripción</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none"></textarea>
 
-      <!-- Selector destinatario -->
-      <label for="destinatario">Selecciona a quién deseas contactar:</label>
-      <select id="destinatario" name="destinatario" required 
-              class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none">
-        <option value="" disabled selected>-- Selecciona un contacto --</option>
-        <option value="administracion@dsm.edu.ni">Director Administrativo</option>
-        <option value="direccion.general@dsm.edu.ni">Director General</option>
-        <option value="direccion.primaria@dsm.edu.ni">Directora Primaria</option>
-        <option value="direccion.kindergarten@dsm.edu.ni">Directora Kindergarten</option>
-        <option value="subdireccion.nacional@dsm.edu.ni">Subdirección Nacional</option>
-        <option value="secretaria.academica@dsm.edu.ni">Secretaría Académica</option>
-        <option value="dsc@dsm.edu.ni">Club Deportivo</option>
-		<option value="carola.hilffert@dsm.edu.ni">Representante de JD</option>
-		<option value="kiosko@dsm.edu.ni">Kiosko</option>
-        <option value="admisiones@dsm.edu.ni">Admisiones</option>
-        <option value="informatica@dsm.edu.ni">Informática</option>
-        <option value="difusiondsm@dsm.edu.ni">Marketing</option>
-      </select>
+        <button type="submit" class="bg-blue-600 hover:bg-blue-700 focus:bg-green-500 active:bg-green-600 text-white font-semibold py-2 px-4 rounded w-full transition-colors duration-200">Enviar solicitud</button>
+      </form>
 
-      <!-- Mensaje -->
-      <label for="mensaje">Descripción</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required 
-                class="w-full border rounded p-2 mb-4 focus:border-green-400 focus:ring focus:ring-green-200 focus:outline-none"></textarea>
-
-      <!-- Botón -->
-      <button type="submit" 
-              class="bg-blue-600 hover:bg-blue-700 focus:bg-green-500 active:bg-green-600 text-white font-semibold py-2 px-4 rounded w-full transition-colors duration-200">
-        Enviar solicitud
-      </button>
-    </form>
-
-    <!-- 🔄 Modal -->
-    <div id="loadingModal" 
-         class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden z-50 rounded-lg">
-      <div class="bg-white rounded-xl p-6 flex flex-col items-center shadow-xl">
-        <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-        <p class="text-gray-700 font-semibold">Procesando tu solicitud...</p>
+      <div id="loadingModal" class="absolute inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden z-50 rounded-lg">
+        <div class="bg-white rounded-xl p-6 flex flex-col items-center shadow-xl">
+          <div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+          <p class="text-gray-700 font-semibold">Procesando tu solicitud...</p>
+        </div>
       </div>
     </div>
-
-  </div>
-</section>
-
-<!-- Visible -->
-<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+  </section>
 
 
-<!-- Noticias Varias -->
-<section id="avisos" class="text-center py-16 bg-gradient-to-r from-blue-50 to-blue-100 slide-right">
-  <h2 class="text-2xl font-bold mb-4">Noticias Varias</h2>
-
-  <div class="relative inline-block rounded-xl shadow-lg overflow-hidden"
-       style="background: linear-gradient(135deg, #3b82f6, #60a5fa);">
-
-    <img id="slideshow-img" src="https://via.placeholder.com/800x450" 
-         alt="Imagen" 
-         class="rounded-xl shadow-lg h-auto object-contain transition duration-500"
-         style="width: 40vw; max-width: 400px; display:block;">
-    
-    <!-- Botones de navegación -->
-    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">
-      &#10094;
-    </button>
-    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">
-      &#10095;
-    </button>
-  </div>
-</section>
-
-<!-- Visible -->
-<hr class="my-12 border-t-2 border-blue-400 w-3/4 mx-auto">
+<!-- NOTICIAS -->
+  <section class="noticias-variadas text-center py-12 px-4">
+    <h2 class="text-2xl font-bold mb-4">Noticias Varias</h2>
+    <div class="relative w-full rounded-xl shadow-lg overflow-hidden" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); padding: 2rem 0;">
+      <img class="slideshow-img rounded-xl shadow-lg h-auto object-contain mx-auto transition duration-500" src="https://via.placeholder.com/800x450" alt="Imagen" style="width: 40vw; max-width: 400px;">
+      <button class="prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">&#10094;</button>
+      <button class="next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 rounded-full p-3 shadow-lg">&#10095;</button>
+    </div>
+  </section>
 
 
 <!-- NUESTRAS REDES SOCIALES -->
-<section id="redes" class="container mx-auto py-16 slide-left">
 
-  <div class="text-center my-8 follow-us">
+  <div class="text-center my-8 follow-us px-4">
     <h3>Nuestras Redes Sociales</h3>
     <h3>Síguenos y mantente conectado</h3>
     
-    <div class="mt-6 flex justify-center gap-8">
-      <!-- Facebook -->
+  <div class="mt-6 flex justify-center gap-6 flex-wrap">
       <a href="https://www.facebook.com/dsmanagua" target="_blank" class="gif-link hover-zoom">
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjl1a3Z4aTNidnVlanBieXp2OW9udTNncTZhdHhtemlubmpmYzFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9FbLcp4NnluxdR6EyZ/giphy.gif" 
-             alt="Facebook Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjl1a3Z4aTNidnVlanBieXp2OW9udTNncTZhdHhtemlubmpmYzFqMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9FbLcp4NnluxdR6EyZ/giphy.gif" alt="Facebook Animación" class="w-40 h-40 sm:w-64 sm:h-64 object-contain">
       </a>
-
-      <!-- Instagram -->
       <a href="https://www.instagram.com/dsmanagua" target="_blank" class="gif-link hover-zoom">
-        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExemRnYmdoNWNyNDB1aXRtODVland0MTN2Y3EyZW5uYXozdTJzejExaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uo6rcjwHSAFsQ/giphy.gif" 
-             alt="Instagram Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExemRnYmdoNWNyNDB1aXRtODVland0MTN2Y3EyZW5uYXozdTJzejExaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uo6rcjwHSAFsQ/giphy.gif" alt="Instagram Animación" class="w-40 h-40 sm:w-64 sm:h-64 object-contain">
       </a>
-
-      <!-- YouTube -->
       <a href="https://youtube.com/@colegioalemannicaraguense9449?feature=shared" target="_blank" class="gif-link hover-zoom">
-        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWE4ejRtcWdxZm56NnkweGdjMWFmN2lrZmoya3J2eWpqOHd1cXd4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13Nc3xlO1kGg3S/giphy.gif" 
-             alt="YouTube Animación" class="gif-float w-64 h-64 md:w-80 md:h-80">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWE4ejRtcWdxZm56NnkweGdjMWFmN2lrZmoya3J2eWpqOHd1cXd4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13Nc3xlO1kGg3S/giphy.gif" alt="YouTube Animación" class="w-40 h-40 sm:w-64 sm:h-64 object-contain">
       </a>
     </div>
   </div>
 </section>
-
 
 
 <!-- Chat flotante estilo interactivo -->
@@ -533,46 +644,21 @@
   </div>
 </div>
 
-
-<!-- FOOTER -->
-<footer id="contacto" class="bg-blue-900 text-white py-8 slide-left">
-  <div class="container mx-auto text-center space-y-4">
-    <p class="font-semibold">Deutsche Schule Managua - Colegio Alemán Nicaragüense</p>
-    <p>Dirección: Km 10.5 Carretera Sur, 800 al oeste, Managua, Nicaragua</p>
-    
-    <!-- Correo -->
-    <p>
-      Correo: 
-      <a href="mailto:info@dsm.edu.ni" class="underline hover:text-yellow-300">
-        info@dsm.edu.ni
-      </a>
-    </p>
-
-    <!-- Celular / WhatsApp -->
-    <p class="flex justify-center items-center space-x-2">
-      <span>Celular:</span>
-      <a href="https://wa.me/50588565989" target="_blank" class="underline hover:text-green-300">
-        8856-5989
-      </a>
-    </p>
-
-    <p>Horario de atención: 07:30am a 05:00pm</p>
-
-    <!-- Página web con emoji -->
-    <p>
-      🌐 
-      <a href="https://www.dsm.edu.ni" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-300">
-        www.dsm.edu.ni
-      </a>
-    </p>
-  </div>
-</footer>
-
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white py-8 w-full mt-8">
+    <div class="mx-auto px-4 text-center space-y-4 max-w-[1200px]">
+      <p class="font-semibold">Deutsche Schule Managua - Colegio Alemán Nicaragüense</p>
+      <p>Dirección: Km 10.5 Carretera Sur, 800 al oeste, Managua, Nicaragua</p>
+      <p>Teléfono: +505 22981000 | Correo: <a href="mailto:info@dsm.edu.ni" class="underline">info@dsm.edu.ni</a></p>
+      <p class="flex justify-center items-center space-x-2"><span>Celular:</span><a href="https://wa.me/50588565989" target="_blank" class="underline hover:text-green-300">8856-5989</a></p>
+      <p>Horario de atención: 07:30am a 05:00pm</p>
+      <p>🌐 <a href="https://www.dsm.edu.ni" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-300">www.dsm.edu.ni</a></p>
+    </div>
+  </footer>
 
 
 <!-- Al final del body -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/js.js"></script>
-
+<script src="js/js.js"></script>
 
 </div>
 </body>
